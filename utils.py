@@ -42,6 +42,7 @@ class EbookModeDetector(GObject.GObject):
             if data == '':
                 return False
             if ord(data[10]) == 1:  # SW_TABLET_MODE
+                print('ping')
                 mode = (ord(data[12]) == 1)
                 if mode != self._ebook_mode:
                     self._ebook_mode = mode
